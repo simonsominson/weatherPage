@@ -159,40 +159,40 @@ const tempMinCardFive = document.querySelector(".tempminfive");
 const iconImgFive = document.querySelector(".iconFive img");
 
 const setDaysData = data => {
+    console.log(data);
    
     //DAY ONE//
-    let dateOne = data.list[7].dt_txt;
+    let tempMinOne = data.list[2].main.temp_min;
     let tempMaxOne = data.list[7].main.temp_max;
-    let tempMinOne = data.list[3].main.temp_min;
-    let iconOne = data.list[4].weather[0].icon;
+    let iconOne = data.list[5].weather[0].icon;
     
     updateDetailsDayOne(tempMaxOne, tempMinOne, iconOne);
     //DAY ONE//
 
 
     //DAY TWO //
+    let tempMinTwo = data.list[10].main.temp_min;
     let tempMaxTwo = data.list[15].main.temp_max;
-    let tempMinTwo = data.list[11].main.temp_min;
-    let iconTwo = data.list[12].weather[0].icon;
+    let iconTwo = data.list[15].weather[0].icon;
     updateDetailsDayTwo(tempMaxTwo, tempMinTwo, iconTwo);
     
 
     //DAY THREE//
+    let tempMinThree = data.list[18].main.temp_min;
     let tempMaxThree = data.list[23].main.temp_max;
-    let tempMinThree = data.list[19].main.temp_min;
-    let iconThree = data.list[20].weather[0].icon;   
+    let iconThree = data.list[23].weather[0].icon;   
     updateDetailsDayThree(tempMaxThree, tempMinThree, iconThree);
 
     // DAY FOUR //
+    let tempMinFour = data.list[26].main.temp_min;
     let tempMaxFour = data.list[31].main.temp_max;
-    let tempMinFour = data.list[28].main.temp_min;
-    let iconFour = data.list[29].weather[0].icon;
+    let iconFour = data.list[31].weather[0].icon;
     updateDetailsDayFour(tempMaxFour, tempMinFour, iconFour);
 
     // DAY FIVE //
-    let tempMaxFive = data.list[38].main.temp_max;
-    let tempMinFive = data.list[35].main.temp_min;
-    let iconFive = data.list[36].weather[0].icon;
+    let tempMinFive = data.list[34].main.temp_min;
+    let tempMaxFive = data.list[39].main.temp_max;
+    let iconFive = data.list[39].weather[0].icon;
     updateDetailsDayFive(tempMaxFive, tempMinFive, iconFive);
 }
 
