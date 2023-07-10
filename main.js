@@ -20,7 +20,7 @@ const { latitude, longitude } = position.coords;
 fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=36a453f41137cbbf3752dd9a4daa58c3`)
     .then(response => response.json())
     .then(data => setWeatherData(data)) 
-fetch (`http://api.openweathermap.org/data/2.5/forecast?units=metric&lat=${latitude}&lon=${longitude}&appid=36a453f41137cbbf3752dd9a4daa58c3`)
+fetch (`https://api.openweathermap.org/data/2.5/forecast?units=metric&lat=${latitude}&lon=${longitude}&appid=36a453f41137cbbf3752dd9a4daa58c3`)
     .then (resp => resp.json())
     .then (dataa => setDaysData(dataa))   
 }
