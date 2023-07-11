@@ -159,7 +159,6 @@ const tempMinCardFive = document.querySelector(".tempminfive");
 const iconImgFive = document.querySelector(".iconFive img");
 
 const setDaysData = data => {
-    console.log(data);
    
     //DAY ONE//
     let tempMinOne = data.list[2].main.temp_min;
@@ -242,7 +241,7 @@ function updateDetailsDayFive(tempMaxFive, tempMinFive, iconFive) {
 
 
 let onLoad = () => {
-   if(navigator.geolocation.getCurrentPosition(fetchData)){
+   if(navigator.geolocation.getCurrentPosition(fetchData, setDaysData)){
 
    } else  {
     alert("Please, you need to active Location.");
